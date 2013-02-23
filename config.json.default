@@ -16,7 +16,13 @@
 		"jabber_port":5223,
 		"jabber_server":"talk.google.com",
 		"jabber_domain":"gmail.com",
-                "jabber_jid":"your.gmail@gmail.com"
+                "jabber_jid":"your.gmail@gmail.com",
+                "email":{
+                        "from":"avibot@softwareprocess.es",
+                        "server":"fragile",
+                        "to":"youremail@stuff.com",
+                        "subject":"LifeLogBot!"
+                }
 	},
     "schedule":[
         "weekly 23456 10:00 say What's up?",

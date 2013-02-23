@@ -54,10 +54,7 @@ sub interpret_command {
     my ($self, $commandline) = @_;
     my @commandline = split(/\s+/, $commandline);
     my $command = $commandline[0] || "";
-    if (exists $self->commands()->{$command}) {
-        return $self->commands()->{$command}->($self,@commandline);
-    }
-    return "";
+    return $self->execute_command($command, @commandline);
 }
 
 # Mon = 1 Sun = 7
@@ -99,4 +96,24 @@ sub add_connection {
     push @{$self->connections}, $conn;
 }
 
+sub register_command {
+    my ($self, $commandname, $command) = @_;
+    if (@_ == 2) {
+        $command = $commandname;
+        $commandname = $command->command_name;
+    }
+    # register command
+    $self->commands->{$commandname} = sub { 
+        my ($agent,$commandname,@args) = @_;
+        return $command->call_back( $self, @args );
+    };
+}
+
+sub execute_command {
+    my ($self, $command, @commandline) = @_;
+    if (exists $self->commands()->{$command}) {
+        return $self->commands()->{$command}->($self,$command,@commandline);
+    }
+    return "Error: Could not find command!";
+}
 1;

@@ -72,4 +72,11 @@ sub append_org_file {
     close($fd);
 }
 
+sub get_recent_log_entries {
+    my ($self,$seconds) = @_;
+    my $time = time() - $seconds;
+    my @entries = grep { $_->time() > $time  } @{$self->log_entries};
+    return @entries;
+}
+
 1;

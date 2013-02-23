@@ -12,11 +12,11 @@ Life Log Bot will:
 * Schedule harassment
 * Allow interaction via IRC
 * Allow interaction via Jabber (google-talk)
+* Email a report every-day [done via schedule]
 
 Life Log Bot will eventually:
 
 * TODO: Write messages after 10 minutes 
-* TODO: Email a report everyday
 * TODO: Refactor the commands into something more coherent
 * TODO: Add more commands and markups
 * TODO: calendar sync
