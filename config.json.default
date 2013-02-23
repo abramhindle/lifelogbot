@@ -1,0 +1,33 @@
+{
+	"logfile":"logs/log.org",
+	"my_nick":"anick",
+	"allow_nick":{"anick!user@hostname1":1, 
+                      "anick!user@hostname2":1
+                     },
+	"properties":{
+		"irc":{
+			"server":"ircserver",
+			"port":6697,
+			"nick":"botname",
+			"ssl":1
+		},
+		"jabber_user":"whatever@gmail.com",
+		"jabber_password":"password",
+		"jabber_port":5223,
+		"jabber_server":"talk.google.com",
+		"jabber_domain":"gmail.com",
+                "jabber_jid":"your.gmail@gmail.com"
+	},
+    "schedule":[
+        "weekly 23456 10:00 say What's up?",
+        "weekly 23456 14:00 say What's up?",
+        "weekly 23456 16:45 say What's up?",
+        "weekly 2356  20:00 say What's up?",        
+        "weekly 16    12:00 say What's up?",        
+        "weekly 16    18:00 say What's up?",        
+        "daily 00:32 say testing",
+        "daily 00:29 say testing",
+        "daily 00:30 say testing",
+        "daily 00:31 say testing"
+    ]
+}

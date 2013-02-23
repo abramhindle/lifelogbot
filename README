@@ -1,0 +1,48 @@
+Life Log Bot
+============
+
+Life Log Bot is an attempt to create a personal agent. 
+
+Life Log Bot will:
+
+* Record messages sent to it
+* Record messages in org format
+* Ping you every so often and ask what you are doing
+* Aggregate messages into 10 minute chunks.
+* Schedule harassment
+* Allow interaction via IRC
+* Allow interaction via Jabber (google-talk)
+
+Life Log Bot will eventually:
+
+* TODO: Write messages after 10 minutes 
+* TODO: Email a report everyday
+* TODO: Refactor the commands into something more coherent
+* TODO: Add more commands and markups
+* TODO: calendar sync
+
+How do I use it?
+================
+
+I use my android phone to talk to Life Log Bot over google talk and use the
+speech to text interface to dictate notes.
+
+Sometimes I use it on IRC. IRC is nice because it is easy to run your
+own server. Note for IRC, irssi proxy might work.
+
+Note, in both cases a 3rd party can listen in. I don't have OTR
+
+Configuration
+=============
+
+* Check this out,
+* mkdir config
+* cp config.json.default config/config.json
+* edit config/config.json
+
+Configure Jabber and IRC accounts. You'll need to make an account for the bot.
+
+
+
+In this day and age where everyone wants your information wouldn't it
+be nice to have some control over yourself.
