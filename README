@@ -16,10 +16,13 @@ Life Log Bot will:
 
 Life Log Bot will eventually:
 
+* TODO: Write out to a database to allow the bot to restart
+* TODO: Write out schedule to allow saving of schedules to disk
 * TODO: Write messages after 10 minutes 
 * TODO: Refactor the commands into something more coherent
 * TODO: Add more commands and markups
 * TODO: calendar sync
+* TODO: Make default config a global singleton 
 
 How do I use it?
 ================
@@ -31,6 +34,40 @@ Sometimes I use it on IRC. IRC is nice because it is easy to run your
 own server. Note for IRC, irssi proxy might work.
 
 Note, in both cases a 3rd party can listen in. I don't have OTR
+
+Commands
+========
+
+.c say broadcast this message
+
+   Broadcasts "broadcast this message" across IRC and Jabber
+
+.c say email DO THIS NOW!
+   
+   Emails your account a message saying DO THIS NOW!
+   Useful for any adhoc automation
+
+.c save
+   
+   Save your message out to the log
+
+.c dailyreport
+
+   Bundle up a dailyreport and email it to yourself
+
+.c schedule weekly [1234567]+ [012][0-9]:[0-5][0-9] commandname commandargs
+
+   Schedule days of week at a certain time to execute command with commandargs
+   - Good for repeating reminders with say or email
+
+.c schedule weekly 23456 10:00 say What's up?
+
+   Example schedule of Monday to Friday 10am messaging the accounts "What's up?"
+
+.c schedule daily [012][0-9]:[0-5][0-9] commandname commandargs
+.c schedule daily 12:00 dailyreport
+
+   Example schedule of a dailyreport at noon
 
 Configuration
 =============
@@ -46,3 +83,23 @@ Configure Jabber and IRC accounts. You'll need to make an account for the bot.
 
 In this day and age where everyone wants your information wouldn't it
 be nice to have some control over yourself.
+
+License
+=======
+
+     AUTHOR
+
+Abram Hindle <abram.hindle@softwareprocess.es>
+
+COPYRIGHT AND LICENSE
+
+LifeLogBot is Copyright (C) 2013, Abram Hindle.
+
+This [library|program|code|module] is free software; you
+can redistribute it and/or modify it under the same terms
+as Perl 5.10.0. For more details, see the full text of the
+licenses in the directory LICENSES.
+
+This program is distributed in the hope that it will be
+useful, but without any warranty; without even the implied
+warranty of merchantability or fitness for a particular purpose.
